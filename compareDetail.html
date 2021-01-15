@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<link rel="icon" href="favicon.ico">
+		<title>产品对比</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script charset="utf-8" src="./static/js/chunk-0080c6a6.613f8e42.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3d60d7d2.ebde4dfb.css">
+		<script charset="utf-8" src="./static/js/chunk-3d60d7d2.78d9daea.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-1a7bd638.d551c669.css">
+		<script charset="utf-8" src="./static/js/chunk-1a7bd638.5e0ad938.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3e69cd44.d12d75d8.css">
+		<script charset="utf-8" src="./static/js/chunk-3e69cd44.428bed1a.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-79926bad.f5014da9.css">
+		<script charset="utf-8" src="./static/js/chunk-79926bad.e246b0a8.js"></script>
+		
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<link rel="stylesheet" href="./static/css/vantIndex_xtcpk.css">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vant.js"></script>
+		<style scoped>
+			#compare{
+		        position: relative;
+		        min-height: 100%;
+		        background: rgb(242,246,250);
+		        /* background: url("../static/img/bg1.png") repeat;
+		        background-position-y: top;
+		        background-size: 100%; */
+		        /* padding-bottom:30px; */
+		    }
+		    .tableBox{
+		        width: 100%;
+		        overflow-x: scroll;
+		    }
+		    .table{
+		        text-align: center;
+		        width: 1000px;
+		    }
+		    .tableCol_left{
+		        position: absolute;
+		        top:46px;
+		        left:0;
+		        background: #5c93e6;
+		        color:#fff;
+		        /* background: rgb(220, 235, 246); */
+		        z-index: 2;
+		    }
+		    .tableCol_left_scoll{
+		        position: fixed;
+		    }
+		    .tableCol_right{
+		        position: relative;
+		        padding-top:30px;
+		    }
+		    .tableCol_rightMargin{
+		        margin-left:150px;
+		    }
+		    .row_rightTop{
+		        position: absolute;
+		        top:0;
+		    }
+		    .row_left{
+		        width: 150px;
+		        min-height:30px;
+		        position: relative;
+		        border:none;
+		    }
+		    .row_left>div{
+		        border:1px solid #e0e0e0;
+		    }
+		    .col_left_One{
+		        border:1px solid #e0e0e0 !important;
+		    }
+		    .row_left div.col_left_1{
+		        width: 78px;
+		        position: absolute;
+		        top:50%;
+		        transform: translateY(-50%);
+		        border: 0;
+		    }
+		    .col_left{
+		        height:30px;
+		        line-height: 30px;
+		        width: 70px;
+		        margin-left:78px;
+		        overflow-x: auto;
+		        white-space: nowrap;
+		        overflow-y: hidden;
+		    }
+		    .row_left .col-leftIn{
+		        border:0;
+		        border-bottom: 1px solid #e0e0e0;
+		        border-left: 1px solid #e0e0e0;
+		    }
+		    .row_left .col-leftIn:last-child{
+		        border-bottom:0;
+		        height: 29px;
+		    }
+		    .row_right{
+		        width: 150px;
+		        height:30px;
+		        line-height: 30px;
+		        border-bottom: 1px solid #e0e0e0;
+		        border-right: 1px solid #e0e0e0;
+		        overflow-x: auto;
+		        white-space: nowrap;
+		        overflow-y: hidden;
+		        background: #fff;
+		    }
+		    .row_right:nth-child(odd){
+		        background: rgba(241, 241, 241, 0.197);
+		    }
+		    .row_right:first-child{
+		        background: #5c93e6;
+		        color:#fff;
+		        /* background:rgb(220, 235, 246); */
+		        border:1px solid #e0e0e0;
+		        border-left:0;
+		    }
+		    .canClick{
+		        color:rgb(55, 55, 248);
+		        /* text-decoration: underline; */
+		    }
+		    .van-dropdown-menu{
+		        /* width: 30% */
+		        color:rgb(55, 55, 248);
+		    }
+		    .van-dropdown-menu::after{
+		        border:none;
+		    }
+		    .sortsBox{
+		        height:50px;
+		        position: relative;
+		    }
+		    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		    .van-popup{
+		        border-radius: 10px;
+		    }
+		    .popContainer{
+		        width: 280px;
+		        height:120px;
+		        padding:15px;
+		        text-align: center;
+		    }
+		    .popText{
+		        font-size: 18px;
+		        font-weight: 500;
+		        /* color:rgb(55, 55, 248); */
+		        /* text-decoration: underline; */
+		    }
+		    .btnLeft{
+		        position: absolute;
+		        transform: translateX(-50%);
+		        left:50%;
+		        bottom:10px;
+		        width: 100%;
+		    }
+		    .btnLeft .van-button{
+		        box-shadow: 2px 4px 6px rgb(188, 189, 190);
+		    }
+		    .btnLeft.both .van-button{
+		        margin:0 15px;
+		    }
+		    .questionIcon{
+		        width: 12px;
+		        transform: translateY(2px);
+		        margin-right:5px;
+		    }
+		</style>
+	</head>
+	<body style="" class="">
+		<noscript><strong>We're sorry but share doesn't work properly without JavaScript enabled.
+				Please enable it to continue.</strong></noscript>
+		<div id="app" style="width: 100%; height: 667px;" v-cloak>
+			<div data-v-76d95080="" id="compare">
+				<div data-v-18f18e78="" data-v-76d95080="" id="getBack">
+					<a href="javascript:history.back(-1);">
+						<button data-v-18f18e78="" class="getback van-button van-button--default van-button--small"><span data-v-18f18e78=""
+							 class="van-button__text">
+								返回
+							</span>
+						</button>
+					</a>
+					<div data-v-18f18e78="" class="clear"></div>
+				</div>
+				<div class="tableBox">
+					<van-row class="table" :style="{ width: tableWidth + 'px'}">
+						<!-- 左侧分级表头 -->
+						<van-col class="tableCol_left">
+							<van-row class="row_left" v-for="(val,index) in compareLeftData" :key="index">
+								<van-col v-if="val.value.length>0" style="borderTop:0">
+									<van-col class="col_left_1">
+										{{val.name}}
+									</van-col>
+									<van-col style="border:0">
+										<van-row class="col_left col-leftIn" v-for="(valLeft,indexLeft) in val.value" :key="indexLeft">
+											{{valLeft.sname}}
+										</van-row>
+									</van-col>
+								</van-col>
+								<van-col class="col_left" v-else style="width:100%;marginLeft:0;borderTop:0" :class="{col_left_One : index == 0}">
+									{{val.name}}
+								</van-col>
+							</van-row>
+						</van-col>
+						<!-- 右侧内容数据 -->
+						<van-col class="tableCol_right" :class="index == 0 ? 'tableCol_rightMargin' : ''" v-for="(val,index) in compareInfo.length"
+						 :key="index">
+							<van-row class="row_right" :class="indexInfo == 0 ? 'row_rightTop' : ''" v-for="(valInfo,indexInfo) in compareInfo[index]"
+							 :key="indexInfo" :style="{ width: rightWidth + 'px'}">
+								<!-- {{valInfo}} -->
+								<span :class="[valInfo.indexOf('Tel') !=-1 ? 'tels':'',valInfo.split('Length')[1]== undefined ? '':'canClick']"
+								 @click="rightShowPopup(valInfo)">
+									{{valInfo.split("Tk,")[0].split("Tel")[0].split('Length')[0]}}
+								</span>
+							</van-row>
+						</van-col>
+					</van-row>
+				</div>
+				<van-popup v-model="rightPopShow">
+					<div class="popContainer">
+						<p class="popText" v-for="(val,index) in rightPopText" :key="index">{{val}}</p>
+						<div class="btnLeft both">
+							<van-button hairline type="info" size="small" v-if="seeAdr != undefined" @click="rightPop(seeAdr)">
+								点击查看
+							</van-button>
+							<van-button hairline type="danger" size="small" v-if="downloadAdr != undefined" @click="rightPop(downloadAdr)">
+								点击下载
+							</van-button>
+						</div>
+					</div>
+				</van-popup>
+			</div>
+		</div>
+		<!-- <script src="js/chunk-vendors.76f48a47.js"></script> -->
+		<!-- <script src="js/app.1f282178.js"></script> -->
+		<script>
+			var type
+			var ids
+			var openId
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					tableWidth: 0,
+					compareLeftData: [],
+					compareInfo: [],
+					rightWidth: 150,
+					//~~~~~~~~~~~~~~~~~~~~~~~~~ 
+					popShow: false,
+					rightPopShow: false,
+					popText: '',
+					rightPopText: '',
+					thisSid: '',
+					thisLink: false,
+					seeAdr: '',
+					downloadAdr: '',
+
+					btnkg: 0
+
+				},
+				created: function() {
+					// this.type = JSON.parse(window.sessionStorage.getItem('details')).type;
+					// this.ids = JSON.parse(window.sessionStorage.getItem('details')).id;
+					// this.openId = window.sessionStorage.getItem('openId');
+					type = JSON.parse(window.sessionStorage.getItem('details')).type;
+					ids = JSON.parse(window.sessionStorage.getItem('details')).id;
+					openId = window.sessionStorage.getItem('openId');
+
+
+					var resdata = {
+						"code": "S0001",
+						"data": {
+							"name": [
+								[{
+									"name": "产品名称",
+									"link": "false",
+									"value": [],
+									"sid": ""
+								}, {
+									"name": "(1)免赔额",
+									"link": "false",
+									"value": [],
+									"sid": ""
+								}, {
+									"name": "(2)保额",
+									"link": "false",
+									"value": [],
+									"sid": ""
+								}, {
+									"name": "(3)赔付比例(有社保)",
+									"link": "false",
+									"value": [],
+									"sid": ""
+								}, {
+									"name": "(4)赔付比例(无社保)",
+									"link": "false",
+									"value": [],
+									"sid": ""
+								}, {
+									"name": "(5)保险范围",
+									"link": "false",
+									"value": [],
+									"sid": ""
+								}],
+								["阳光人寿学生实习人身意外保险", "100元", "1万", "80%", "80%", "限社保"]
+							]
+						},
+						"message": "成功",
+						"fid": "S0008"
+					}
+					this.compareLeftData = resdata.data.name.slice(0, 1)[0];
+					this.compareInfo = resdata.data.name.slice(1);
+					var width = this.compareInfo.length * 150 + 150;
+					this.tableWidth = width;
+					if (this.compareInfo.length == 1) {
+						var width = this.compareInfo.length * 150 + 150;
+						this.tableWidth = width;
+						var w = window.innerWidth ||
+							document.documentElement.clientWidth ||
+							document.body.clientWidth;
+						this.rightWidth = w - 150;
+					}
+				},
+				mounted: function() {
+					return
+					this.getInfo();
+				},
+				methods: {
+					getInfo() {
+						var detaildata = this.$route.params.data;
+						if (detaildata) {
+							window.sessionStorage.setItem('compareDetail', detaildata);
+						} else {
+							detaildata = window.sessionStorage.getItem('compareDetail');
+						}
+						var data = {
+							fid: "S0008",
+							type: detaildata.type,
+							sid: detaildata.sid,
+							openId: this.$store.state.openId,
+							num: detaildata.num,
+						}
+						api(data).then(res => {
+							this.compareLeftData = res.data.data.name.slice(0, 1)[0];
+							this.compareInfo = res.data.data.name.slice(1);
+							var width = this.compareInfo.length * 150 + 150;
+							this.tableWidth = width;
+							if (this.compareInfo.length == 1) {
+								var width = this.compareInfo.length * 150 + 150;
+								this.tableWidth = width;
+								var w = window.innerWidth ||
+									document.documentElement.clientWidth ||
+									document.body.clientWidth;
+								this.rightWidth = w - 150;
+							}
+						});
+					},
+					showPopup(key, val, name) {
+						this.popShow = true;
+						this.thisLink = key;
+						this.thisSid = val;
+						this.popText = name;
+					},
+					rightShowPopup(val) {
+						this.seeAdr = val.split("Tk,")[1];
+						this.downloadAdr = val.split("Tk,")[2];
+						this.rightPopShow = true;
+						this.rightPopText = val.split("Tk,")[0].split("Tel")[0].split("Length")[0].split("\\n");
+					},
+					rightPop(val) {
+						window.location.href = val;
+					},
+				}
+			});
+
+
+
+			function getMore() {
+				// if (vm.btnkg == 1) {
+				// 	return
+				// }
+				// vm.btnkg = 1
+				var serchData = JSON.parse(sessionStorage.getItem('detailData'));
+				var data = {
+					fid: "S0007",
+					type: type,
+					openId: openId,
+					keyword: "",
+					ids: ids,
+					sorts: false
+				}
+				$.ajax({
+					url: "https://www.xiaotubaoxian.com/bx/mobile",
+					data: JSON.stringify(data),
+					type: "post",
+					contentType: 'application/json',
+					'X-Requested-With': 'XMLHttpRequest',
+					dataType: 'json',
+					success: function(res) {
+						vm.btnkg = 0
+						// console.log(res);
+						if (res.code == 1) {
+							console.log(res)
+							vm.compareLeftData = res.data.data.name.slice(0, 1)[0];
+							vm.compareInfo = res.data.data.name.slice(1);
+							var width = vm.compareInfo.length * 150 + 150;
+							vm.tableWidth = width;
+							var w = window.innerWidth ||
+								document.documentElement.clientWidth ||
+								document.body.clientWidth;
+							vm.rightWidth = w - 150;
+							vm.isLike = vm.compareLeftData[0].issc;
+						} else {
+
+							// layerMsg(res.msg);
+						}
+					},
+					error: function(err) {
+						vm.btnkg = 0
+						// layer.closeAll()
+						// layerMsg('系统错误')
+					}
+				})
+			}
+
+
+			function Storage_get(name) {
+				return JSON.parse(localStorage.getItem(name))
+			}
+
+			function Storage_set(name, val) {
+				localStorage.setItem(name, JSON.stringify(val))
+			}
+		</script>
+	</body>
+</html>

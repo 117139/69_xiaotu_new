@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<link rel="icon" href="./static/favicon.ico">
+		<title>选择搜索方式</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script src="./static/js/chunk-0080c6a6.613f8e42.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-b54f7384.becdfdae.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-b65928a2.cbbcb34f.js" charset="utf-8"></script>
+		<style>
+			#choose {
+			    width: 100%;
+			    min-height: 100vh;
+			    text-align: center;
+			    background: #f2f6fa;
+			    padding-top: 160px;
+			}
+			.explain {
+			    text-align: center;
+			    font-size: 15px;
+			    line-height: 20px;
+			    position: absolute;
+			    top: 20px;
+			    right: 0;
+			    width: 60px;
+			    padding: 6px;
+			    padding-left: 12px;
+			    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABSCAYAAAA/zHhsAAADb0lEQVR4nO2dOYgVMRiAv32e6wmrhfcFHqCVIFZaKe4qFmq5a+kJCsJD10qwcxexUPCo1c4FtVDUylawEgsFFfEqVFBRV0WUHzIwbN4xR/JmdvJ/ZTLw5v/ISzKZP5muwZv/KJiFwDpgDbAaWAUsAOYA3cDMom8wLxML+M0eoA/oBTYDS6wrKkanJE8B9gADwBZgknVFhfEtWf72R4F9pgUHiS/J0s+eNHInW7WB4VqyDFR1I7jbqlXJuZG+9jKwoqBYSkvNwY1Ji70A3FPBjcnbkmVOe8PMc5Um5GnJMtd9pILbk1WyzBpuAbOsGsUii+TjZoAr4mlxXJJWlEzPzlilSkvStORDwJBVqrQlqeQdwHmgy6pRnEheCVwDJlg1SiLaSZ4GjACzrRolMe0kn9V5cH5aSd4KHLBKldQ0kyzdxCUd6NzQTHJdF3vc0UjyfOCEVapkppHkuukuFEeMlTwX2K9y3TJW8jFgxngPqmzEJU/VKZsf4pJ3m6wdxTFxyf0q1w+R5B7zhKd4IJLcG1rqVCeJJPeFEW4xRJI3hRZ4JxHJi4Cl4YTceUTy+tCC7jQ1XZT3T828w1M8IpKXqWC/iOR5VQ6wDNR0vcI/NbP6pnikVoV9cmWn0esnxTEi+ZtK9YtIHq1ygGVAJH8KXYJvRPKHaodYPCL5VegSfCOSn1c7xOIRyU9Cl+Abkfy42iEWj0h+A7wOXYRPoie+h9UMrxxEku+ELsInkeS7wJ9qhlg8keTPwIOQRfgkvgp3tXrhlYO45BHTohXHxCWPmh1PikfJwjngu3WV4lTyR+CKdZXiVLIwDPywShWnkt8b0YojGknGHB7ywipVnLVkTHdxECj83N8q0EyycF+ndG5oJRmzBfipVaqkop1k6TZ2AV+sGiUxSTKIngF7gb9WjZKIpGlat4EjOhBmI00u3EU9ByMbaRMOh41obdEpyJLVOWTm0NpHJyRr6qwsIu0Evlo1ikWe/GR5+bpBk2PakzcJXKZ3G82gqP10E1xk2ssDy2FgG/DSqlWcbmeQtY61wGngp1UbMK73jIjcU2aXq3Qhv60rAsTXxpy3pgtZbk4OD/otuO/dT++AQfMNqH4zIwkuU6lTW8x+AdeB7Wab8YBJpgkim7QMHz1cbAbM+EcP5bxQOW1RjrOcXvQN5gL4D3AgYXnOGoGYAAAAAElFTkSuQmCC);
+			    background-size: 100% 100%;
+			    color: #fff;
+			}
+			.van-button--large {
+			    width: 100%;
+			    height: 50px;
+			    line-height: 48px;
+			}
+			.van-button--hairline {
+			    border-width: 0;
+			}
+			.nameSearch {
+			    background: url(../img/nameSearch.ff5a4878.png);
+			    background-size: 100% 100%;
+			}
+			#choose .van-button {
+			    width: 80%;
+			    margin-top: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<strong>We're sorry but share doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+		</noscript>
+		<div id="app" style="width: 100%; min-height: 100vh;">
+			<div data-v-4be84c9a="" id="choose">
+				<a href="explain.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/explain">
+					<div data-v-4be84c9a="" class="explain">
+						使用<br data-v-4be84c9a="">说明
+					</div>
+				</a>
+				<a href="nameSearch.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/nameSearch"><button data-v-4be84c9a="" class="search nameSearch van-button van-button--info van-button--large van-button--hairline van-hairline--surround"></button></a>
+				<a href="contentSearch.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/contentSearch"><button data-v-4be84c9a="" class="search contentSearch van-button van-button--info van-button--large van-button--hairline van-hairline--surround"></button></a>
+				<a href="collect.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/collect"><div data-v-4be84c9a="" class="collection"><img data-v-4be84c9a="" src="./static/img/collect.a0842a95.png"></div></a>
+				
+				
+			</div>
+		</div>
+		<!-- <script src="./static/js/chunk-vendors.76f48a47.js"></script>
+		<script src="./static/js/app.1f282178.js"></script> -->
+	</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<title>按名称搜索</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script src="./static/js/chunk-0080c6a6.613f8e42.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-b54f7384.becdfdae.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-4589c879.e5faf897.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-b65928a2.cbbcb34f.js" charset="utf-8"></script>
+
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/swiper.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<!-- <link rel="stylesheet" href="http://web.xiaotubaoxian.com/static/web/css/jquery-weui.min.css"> -->
+		<link rel="stylesheet" href="http://web.xiaotubaoxian.com/static/web/css/vantIndex.css">
+		<!-- <script src="http://web.xiaotubaoxian.com/static/web/js/jquery-weui.min.js"></script> -->
+		<!-- <script src="http://web.xiaotubaoxian.com/static/web/js/picker.js"></script> -->
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vant.js"></script>
+		<style>
+
+			.nameChoose[data-v-6796917a] {
+			    width: 100%;
+			    margin-top: 20px;
+			    display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: flex;
+					flex-wrap: wrap;
+			    -ms-flex-pack: distribute;
+			    justify-content: flex-start;
+			    color: #585757;
+			    font-size: 14px;
+			}
+			.nameChoose[data-v-6796917a] span{
+				margin-right: 10px;
+				line-height: 20px;
+				padding-left: 5px;
+			}
+			.namesearchBox .van-icon.van-icon-search {
+			    top: 50%;
+					left: 10px;
+			}
+			.van-dropdown-menu{
+				height: auto;
+			}
+			.dropDown span:after {
+			    top: 8px;
+			}
+			.van-dropdown-menu__item{
+				border-left: 1px solid #ddd;
+			}
+			.namesearchBox input{
+				width: 90%;
+			}
+		</style>
+	</head>
+	<body style=""><noscript><strong>We're sorry but share doesn't work properly without JavaScript enabled. Please enable
+				it to continue.</strong></noscript>
+		<div id="app" v-cloak style="width: 100%; height: 779px;" v-cloak>
+			<div data-v-6796917a="" id="nameSearch">
+				<div data-v-18f18e78="" data-v-6796917a="" id="getBack">
+					<a href="javascript:history.back(-1);">
+						<button data-v-18f18e78="" class="getback van-button van-button--default van-button--small"><span data-v-18f18e78=""
+							 class="van-button__text">
+								首页
+							</span>
+						</button>
+					</a>
+					<div data-v-18f18e78="" class="clear"></div>
+				</div>
+				<div data-v-6796917a="" class="namesearchBox">
+					<div data-v-6796917a="" class="van-search van-search--show-action" style="background: rgb(255, 255, 255);">
+						<div data-v-6796917a="" class="van-search__content van-search__content--round">
+							<div data-v-6796917a="" class="van-cell van-cell--borderless van-field">
+								<div class="van-field__left-icon"><i class="van-icon van-icon-search">
+										<!----></i></div>
+								<div class="van-cell__value van-cell__value--alone">
+									<div class="van-field__body"><input type="search" placeholder="请输入搜索关键词" v-model="search_key" class="van-field__control"></div>
+								</div>
+								<!-- <div class="dropDown takeLine van-dropdown-menu van-hairline--top-bottom"  @click="showPicker = false"> -->
+								<div class="dropDown takeLine van-dropdown-menu van-hairline--top-bottom" @click="showPicker = true">
+									<div class="van-dropdown-menu__item"><span class="van-dropdown-menu__title">
+											<div class="van-ellipsis">{{value}}</div>
+										</span></div>
+
+								</div>
+							</div>
+						</div>
+						<div data-v-6796917a="" class="van-search__action">
+							<!-- <a href=""> -->
+								<button data-v-6796917a="" @click="nameSearch()" class="namesearchBoxBtn van-button van-button--info van-button--small"><span
+									 data-v-6796917a="" class="van-button__text">搜索</span></button>
+							<!-- </a> -->
+						</div>
+						<van-popup v-model="showPicker" position="bottom">
+							<van-picker show-toolbar :columns="columns" value-key="text" @cancel="showPicker = false" @confirm="onConfirm" />
+						</van-popup>
+					</div>
+					<div data-v-6796917a="" class="nameChoose">
+						<span data-v-6796917a="" :class="active== 'T0'? 'checked':''" @click="active_fuc('T0')">
+							全部
+						</span>
+						<span data-v-6796917a="" v-for="(item,index) in list" :class="active==item.value?'checked':''" @click="active_fuc(item.value)">
+							{{item.text}}
+						</span>
+					</div>
+				</div>
+				<a href="collect.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/collect">
+					<div data-v-4be84c9a="" class="collection"><img data-v-4be84c9a="" src="./static/img/collect.a0842a95.png"></div>
+				</a>
+
+			</div>
+		</div>
+		<script src="./static/js/chunk-vendors.76f48a47.js"></script>
+		<script>
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					search_key: '',
+					showPicker: false, //投保人
+					columns: [{
+							text: '全部',
+							value: 'all'
+						},
+						{
+							text: '产品名称',
+							value: 'name'
+						},
+						{
+							text: '条款名称',
+							value: 'tk'
+						},
+						{
+							text: '公司名称',
+							value: 'com'
+						},
+
+
+
+					],
+					value: '全部',
+					nameValue: 'all',
+					list: [{
+							text: '重疾险',
+							value: 'T1'
+						},
+						{
+							text: '医疗险',
+							value: 'T2'
+						},
+						{
+							text: '意外险',
+							value: 'T3'
+						},
+						{
+							text: '寿险',
+							value: 'T4'
+						},
+						{
+							text: '旅游险',
+							value: 'T6'
+						},
+						{
+							text: '年金险',
+							value: 'T5'
+						}
+					],
+					active: 'T0',
+
+				},
+				created: function() {
+
+				},
+				mounted: function() {
+
+				},
+				methods: {
+					active_fuc: function(num) {
+						this.active = num
+					},
+					onConfirm: function(value) { //投保人
+						console.log(value)
+						this.value = value.text;
+						this.nameValue = value.value;
+						this.showPicker = false;
+					},
+					nameSearch() { //跳转首页展示搜索结果
+						let data = {
+							flag: 0,
+							type: this.nameValue,
+							keyword: this.search_key,
+							qType: this.active,
+						}
+						sessionStorage.setItem('detailData', JSON.stringify(data));
+						// this.$router.push({
+						// 	name: `index`,
+						// });
+						window.location.href="xtcpk_index.html"
+						this.$store.state.title = "按名称搜索";
+					},
+				}
+			});
+		</script>
+		<!-- <script src="js/app.1f282178.js"></script> -->
+	</body>
+</html>

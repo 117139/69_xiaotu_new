@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="divport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>小兔精选</title>
+		<link rel="stylesheet" href="http://web.xiaotubaoxian.com/static/web/css/style.css">
+		<link rel="stylesheet" href="http://web.xiaotubaoxian.com/static/web/css/swiper.min.css">
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/swiper.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<script src="h.js"></script>
+		<style type="text/css">
+			body {
+				background: #fff;
+			}
+			*{
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.minh100{
+					min-height: 100vh;
+					width: 100%;
+				background: #fff;
+			}
+			.h_box{
+				width: 100%;
+				padding: 0 .20rem;
+				
+			}
+			.top_box{
+				width: 100%;
+				min-height: 1.95rem;
+				position: relative;
+				display: flex;
+				align-items: center;
+				font-size: .42rem;
+				color: #37424A;
+			}
+			.top_box div{
+				position: absolute;
+				z-index: 10;
+				line-height: .50rem;
+				top: 50%;
+				margin-top: -.25rem;
+				left: .05rem;
+			}
+			.top_img{
+				width: 100%;
+				height: auto;
+				position: relative;
+				z-index: 1;
+				/* margin-bottom: .10rem; */
+			}
+			.main_box{
+				flex-wrap: wrap;
+				width: 100%;
+			}
+			.main_box a{
+				width: 50%;
+				/* height: 4.70rem; */
+				padding: .10rem;
+				font-size: 0;
+				display: block;
+			}
+			.main_box a img{
+				width: 100%;
+				max-width: 49vw;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="minh100">
+			<div class="h_box box_size">
+				<div class="top_box">
+					<img class="top_img" src="./static/images/xiaotujingxuan1_03.jpg"   />
+					<div>Hi~ 欢迎使用小兔保</div>
+				</div>
+				<div class="main_box dis_flex">
+					<!-- <a  href="https://www.xiaotubaoxian.com/xtbx"><img src="./static/images/xiaotujingxuan_06.jpg" mode="aspectFill" /></a> -->
+					<a  href="xtcpk_search.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/choose"><img src="./static/images/xiaotujingxuan_06.jpg" mode="aspectFill" /></a>
+					<a href="http://web.xiaotubaoxian.com/"><img src="./static/images/xiaotujingxuan_08.jpg" mode="aspectFill" /></a>
+					<a href="http://web.xiaotubaoxian.com/index/search"><img src="./static/images/xiaotujingxuan_11.jpg" mode="aspectFill" /></a>
+					<a href="http://web.xiaotubaoxian.com/index/policyList"><img src="./static/images/xiaotujingxuan_12.jpg" mode="aspectFill" /></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				// document.write('getmac')
+				// document.write(JSON.stringify(h.device()))
+			})
+		
+			var vm = new Vue({
+				el: "#wrap",
+				data: {
+					djph: 0,
+					active: 0,
+					swiperimg: [
+						'./images/banner.jpg',
+						'./images/banner.jpg',
+						'./images/banner.jpg',
+					]
+				},
+				created: function() {
+
+				},
+				mounted: function() {
+
+				},
+				methods: {
+
+				}
+			});
+
+			function getmac() {
+				try{
+				
+				}catch(err){
+					return err
+				}
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<link rel="icon" href="favicon.ico">
+		<title>我的收藏</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script src="./static/js/chunk-0080c6a6.613f8e42.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-b54f7384.becdfdae.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-4589c879.e5faf897.js" charset="utf-8"></script>
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="stylesheet" type="text/css">
+		<script src="./static/js/chunk-b65928a2.cbbcb34f.js" charset="utf-8"></script>
+
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/swiper.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<!-- <link rel="stylesheet" href="http://web.xiaotubaoxian.com/static/web/css/jquery-weui.min.css"> -->
+		<link rel="stylesheet" href="http://web.xiaotubaoxian.com/static/web/css/vantIndex.css">
+		<!-- <script src="http://web.xiaotubaoxian.com/static/web/js/jquery-weui.min.js"></script> -->
+		<!-- <script src="http://web.xiaotubaoxian.com/static/web/js/picker.js"></script> -->
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vant.js"></script>
+		<style scoped>
+			#collect {
+				position: relative;
+				padding-top: 15px;
+				min-height: 100%;
+				background: rgb(242, 246, 250);
+				/* background: url("../static/img/bg1.png") repeat;
+		        background-position-y: top;
+		        background-size: 100%; */
+				/* padding-bottom:30px; */
+			}
+
+			.compare {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				position: fixed;
+				right: 20px;
+				bottom: 100px;
+				box-shadow: 3px 6px 10px #c5c4c44d;
+				background: #58acffec;
+				color: #fff;
+			}
+
+			.compareing {
+				background: #f33f48;
+			}
+
+			.noData {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, 50%);
+				font-size: 16px;
+				color: #c9c9c9;
+			}
+
+			.dataNum {
+				position: absolute;
+				top: 25px;
+				right: 0;
+				padding: 10px 10px;
+				color: #fff;
+				font-size: 14px;
+				text-shadow: 2px 2px 2px rgba(188, 189, 190, 0.39);
+				background: rgba(102, 159, 250);
+				border-top-left-radius: 20px;
+				border-bottom-left-radius: 20px;
+				/* border:1px solid rgb(202, 227, 246); */
+			}
+
+			.insurancesData {
+				font-size: 16px;
+				padding: 10px 10px 60px 10px;
+				padding-bottom: 60px;
+			}
+
+			.insurancesData li {
+				padding: 10px 0;
+				border-bottom: 1px solid rgba(192, 183, 183, 0.363);
+			}
+
+			.insurancesData li.compareChecked {
+				color: #fff;
+				background: #58abffcb;
+			}
+
+			.insurancesData li.getMore {
+				border-bottom: none;
+				text-align: center;
+				font-size: 14px;
+				color: rgba(64, 123, 231, 0.932);
+				text-shadow: 2px 2px 2px rgba(188, 189, 190, 0.39);
+			}
+
+			.insurancesData li.unOnline {
+				color: #aaa;
+			}
+
+			.insurancesData li .shop {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				text-align: center;
+				font-size: 12px;
+				color: #fff;
+				background: rgba(64, 123, 231, 0.932);
+				border-radius: 50%;
+				transform: scale(0.8);
+			}
+
+			.liIcon {
+				transform: translateY(3px);
+			}
+
+			.noCollect {
+				text-align: center;
+				font-size: 16px;
+				opacity: .5;
+				margin-top: 30px;
+			}
+
+			.noCollectBox {
+				text-align: center;
+			}
+
+			.noCollectBox>img {
+				margin-top: 150px;
+				width: 120px;
+			}
+
+			.liked {
+				width: 7px;
+				float: right;
+				margin-top: 4px;
+			}
+
+			.liked .van-image {
+				width: 100%;
+			}
+
+			.liked img {
+				width: 100% !important;
+			}
+		</style>
+
+	</head>
+	<body style="" class=""><noscript><strong>We're sorry but share doesn't work properly without JavaScript enabled.
+				Please enable it to continue.</strong></noscript>
+		<div id="app" style="width: 100%; height: 667px;">
+			<div data-v-7a6a7c09="" id="collect">
+				<div data-v-18f18e78="" data-v-7a6a7c09="" id="getBack">
+					<a href="javascript:history.back(-1);">
+						<button data-v-18f18e78="" class="getback van-button van-button--default van-button--small"><span data-v-18f18e78=""
+							 class="van-button__text">
+								返回
+							</span>
+						</button>
+					</a>
+					<div data-v-18f18e78="" class="clear"></div>
+				</div>
+				<div v-if="Insurances.length>0">
+					<div class="dataNum">共{{Insurances.length}}条</div>
+					<ul class="insurancesData">
+						<li :id="val.id" v-for="(val,index) in Insurances" :key="index" @click="goDetail(val.pid,val.ptypeCode)" :class="[checkedData.indexOf(val.pid) != -1 ? 'compareChecked':'',val.isOnline == '0' ? 'unOnline':'']">
+							<!-- <van-icon :name="beforeIcon" class="liIcon" /> -->
+							<img :src="beforeIcon"  class="liIcon van-icon__image">
+							{{val.pname}}
+							<span class="shop" v-if="val.isBuy != '0' && val.isOnline != '0'">购</span>
+							<!-- <van-icon :name="detailIcon" class="liked" /> -->
+							<img :src="detailIcon" class="liked van-icon__image">
+						</li>
+						<li class="getMore" @click="getMore">
+							加载更多
+						</li>
+					</ul>
+				</div>
+				<div class="noCollectBox" v-else>
+					<img class="noCollectImg" src="./static/img/none.png">
+					<p class="noCollect">您还没有收藏产品哦~</p>
+				</div>
+
+			</div>
+		</div>
+		<script src="./static/js/chunk-vendors.76f48a47.js"></script>
+		<!-- <script src="js/app.1f282178.js"></script> -->
+		<script>
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					compare: false,
+					Insurances: [],
+					checkedData: [],
+					pageIndex: 1,
+					detailData: [],
+					type: 'T0',
+					beforeIcon: './static/img/collectIcon.png',
+					detailIcon: './static/img/detail_icon.png',
+
+				},
+				created: function() {
+					var resdata = {
+						"code": "S0001",
+						"data": {
+							"pageCount": "1",
+							"pcount": "1",
+							"list": [{
+								"isBuy": "0",
+								"pname": "爱心人寿爱加倍(挚爱版)终身重大疾病保险",
+								"ptype": "重疾险",
+								"pid": "bfcee7c784f24d5595ba861ee47f5765",
+								"isOnline": "0",
+								"ptypeCode": "T1"
+							}]
+						},
+						"message": "成功",
+						"fid": "S0009"
+					}
+					this.Insurances = resdata.data.list;
+				},
+				mounted: function() {
+
+				},
+				methods: {
+					goDetail(val, type) { //跳转详情
+						let detailData = {
+							type: type,
+							id: [val]
+						}
+						// this.$store.state.detailData = detailData;
+						// this.$router.push({
+						// 	name: `detail`,
+						// });
+						window.location.href = "detail.html"
+					},
+					getMore() {
+						let data = {
+							fid: 'S0009',
+							openId: this.$store.state.openId,
+							pageSize: this.$store.state.pageSize,
+							pageIndex: "1",
+						}
+						api(data).then(res => {
+							if (res.data.code == 'S0001') {
+								this.Insurances = res.data.data.list;
+								this.$store.state.pageSize += 10;
+							}
+						})
+					},
+					iconCode(code) {
+						switch (code) {
+							case 'T1':
+								return 'label-o';
+								break;
+							case 'T2':
+								return 'bookmark-o';
+								break;
+							case 'T3':
+								return 'bill-o';
+								break;
+							case 'T4':
+								return 'orders-o';
+								break;
+							case 'T5':
+								return 'newspaper-o';
+								break;
+							case 'T6':
+								return 'records';
+								break;
+						}
+
+					},
+					typeCode(code) {
+						switch (code) {
+							case 'T1':
+								return 'red';
+								break;
+							case 'T2':
+								return 'orange';
+								break;
+							case 'T3':
+								return 'blue';
+								break;
+							case 'T4':
+								return 'purple';
+								break;
+							case 'T5':
+								return 'yellow';
+								break;
+							case 'T6':
+								return 'green';
+								break;
+						}
+					},
+				}
+			});
+		</script>
+	</body>
+</html>

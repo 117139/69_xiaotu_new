@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<title>产品对比</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script charset="utf-8" src="./static/js/chunk-0080c6a6.613f8e42.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3d60d7d2.ebde4dfb.css">
+		<script charset="utf-8" src="./static/js/chunk-3d60d7d2.78d9daea.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-1a7bd638.d551c669.css">
+		<script charset="utf-8" src="./static/js/chunk-1a7bd638.5e0ad938.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3e69cd44.d12d75d8.css">
+		<script charset="utf-8" src="./static/js/chunk-3e69cd44.428bed1a.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-79926bad.f5014da9.css">
+		<script charset="utf-8" src="./static/js/chunk-79926bad.e246b0a8.js"></script>
+
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<link rel="stylesheet" href="./static/css/vantIndex_xtcpk.css">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vant.js"></script>
+		<style scoped>
+		    #compare{
+		        position: relative;
+		        min-height: 100%;
+		        background: rgb(242,246,250);
+		        /* background: url("../static/img/bg1.png") repeat;
+		        background-position-y: top;
+		        background-size: 100%; */
+		        /* padding-bottom:30px; */
+		    }
+		    .tableBox{
+		        width: 100%;
+		        height:100%;
+		        overflow-x: scroll;
+		        text-align: center;
+		    }
+		    .tableCol_left{
+		        position: absolute;
+		        top:46px;
+		        left:0;
+		        background: #5c93e6;
+		        color:#fff;
+		        z-index: 2;
+		    }
+		    .tableCol_left_scoll{
+		        position: fixed;
+		    }
+		    .tableCol_right{
+		        position: relative;
+		        /* padding-top:30px; */
+		        padding-top:40px;
+		    }
+		    .tableCol_rightMargin{
+		        margin-left:150px;
+		    }
+		    .row_rightTop{
+		        position: absolute;
+		        top:0;
+		    }
+		    .row_left{
+		        width: 150px;
+		        min-height:30px;
+		        position: relative;
+		        border:none;
+		    }
+		    .row_left>div{
+		        border:1px solid #e0e0e0;
+		    }
+		    .col_left_One{
+		        border:1px solid #e0e0e0 !important;
+		    }
+		    .row_left div.col_left_1{
+		        width: 78px;
+		        position: absolute;
+		        top:50%;
+		        transform: translateY(-50%);
+		        border: 0;
+		    }
+		    .col_left{
+		        /* height:30px;
+		        line-height: 30px; */
+		        height:40px;
+		        line-height: 40px;
+		        width: 70px;
+		        margin-left:78px;
+		        /* overflow-x: auto;
+		        white-space: nowrap; */
+		        overflow-y: hidden;
+		    }
+		    .row_left .col-leftIn{
+		        border:0;
+		        border-bottom: 1px solid #e0e0e0;
+		        border-left: 1px solid #e0e0e0;
+		    }
+		    .row_left .col-leftIn:last-child{
+		        border-bottom:0;
+		        /* height: 29px; */
+		        height: 39px;
+		    }
+		    .row_right{
+		        width: 150px;
+		        /* height:30px;
+		        line-height: 30px; */
+						height:40px;
+						line-height: 40px;
+		        border-bottom: 1px solid #e0e0e0;
+		        border-right: 1px solid #e0e0e0;
+		        /* overflow-x: auto;
+		        white-space: nowrap; */
+		        overflow-y: hidden;
+		        background: #fff;
+		    }
+		    .row_right:nth-child(odd){
+		        background: rgba(241, 241, 241, 0.197);
+		    }
+		    .row_right:first-child{
+		        background: #5c93e6;
+		        color:#fff;
+		        /* background: rgb(220, 235, 246); */
+		        border:1px solid #e0e0e0;
+		        border-left:0;
+		    }
+		    .canClick{
+		        color:rgb(55, 55, 248);
+		        /* text-decoration: underline; */
+		    }
+		     .detail{
+		        /* color:rgb(24, 103, 194);
+		        text-decoration: underline; */
+		    }
+		    .canSort{
+		        color:rgb(55, 55, 248);
+		        text-decoration: underline;
+		    }
+		    .red{
+		        color:red;
+		    }
+		    .van-dropdown-menu{
+		        /* width: 30% */
+		        color:rgb(55, 55, 248);
+		    }
+		    .van-dropdown-menu::after{
+		        border:none;
+		    }
+		    .sortsBox{
+		        height:50px;
+		        position: relative;
+		    }
+		/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+		    .van-popup{
+		        border-radius: 10px;
+		    }
+		    .popContainer{
+		        width: 280px;
+		        min-height:150px;
+		        padding:15px;
+		        text-align: center;
+		    }
+		    .popText{
+		        font-size: 18px;
+		        font-weight: 500;
+		        /* color:rgb(55, 55, 248); */
+		        /* text-decoration: underline; */
+		    }
+		    .popTexts{
+		        margin-top:20px;
+		        font-size: 14px;
+		        line-height: 18px;
+		        letter-spacing: .2px;
+		        color:rgb(33, 33, 44);
+		    }
+		    .btnLeft{
+		        position: absolute;
+		        transform: translateX(-50%);
+		        left:50%;
+		        bottom:10px;
+		        width: 100%;
+		    }
+		    .btnLeft .van-button{
+		        box-shadow: 2px 4px 6px rgb(188, 189, 190);
+		    }
+		    .btnLeft.both .van-button{
+		        margin:0 15px;
+		    }
+		    .icons{
+		        transform: translateY(2px);
+		        margin-right:5px;
+		        color:rgb(240, 117, 69);
+		    }
+		    .btnTel{
+		        display: inline-block;
+		        width: 80px;
+		        height:30px;
+		        line-height: 30px;
+		        color:#fff;
+		        background: #3998f6da;
+		        border-radius: 4px;
+		        box-shadow: 2px 4px 6px rgb(188, 189, 190);
+		        font-size: 14px;
+		    }
+		    .tels{
+		        color:rgb(67, 67, 246);
+		        text-decoration: underline;
+		    }
+		    .questionIcon{
+		        width: 12px;
+		        transform: translateY(2px);
+		        margin-right:5px;
+		    }
+		    .tobuy a{
+		        color:rgb(67,67,246);
+		        text-decoration: underline;
+		    }
+		</style>
+
+	</head>
+	<body style=""><noscript><strong>We're sorry but share doesn't work properly without JavaScript enabled. Please enable
+				it to continue.</strong></noscript>
+		<div id="app" style="width: 100%; height: 667px;" v-cloak>
+			<div data-v-29fa7394="" id="compare">
+				<div data-v-18f18e78="" data-v-29fa7394="" id="getBack">
+					<a href="javascript:history.back(-1);">
+						<button data-v-18f18e78="" class="getback van-button van-button--default van-button--small">
+							<span data-v-18f18e78="" class="van-button__text">
+								返回
+							</span>
+						</button>
+					</a>
+					<div data-v-18f18e78="" class="clear"></div>
+				</div>
+
+
+				<div class="tableBox">
+					<van-row class="table" :style="{ width: tableWidth + 'px'}">
+						<!-- 左侧分级表头 -->
+						<van-col class="tableCol_left">
+							<van-row class="row_left" v-for="(val,index) in compareLeftData" :key="index">
+								<van-col v-if="val.value.length>0" style="borderTop:0">
+									<van-col class="col_left_1" :class="{canClick : val.link == 'true'}">
+										{{val.name}}
+									</van-col>
+									<van-col style="border:0">
+										<van-row class="col_left col-leftIn" :class="{canClick : valLeft.slink == 'true',detail : valLeft.sdetail != '',canSort : valLeft.sisorder != '0'}"
+										 v-for="(valLeft,indexLeft) in val.value" :key="indexLeft">
+											<!-- {{valLeft.sname}} -->
+											<!-- <van-icon :name="sortImg" v-if="valLeft.sisorder != '0'" class="icons" /> -->
+											<!-- <van-icon name="question-o" v-if="valLeft.sdetail != ''" class="icons red"/> -->
+											<img :src="sortImg" v-if="valLeft.sisorder != '0'" class="questionIcon">
+											<img src="./static/img/icons.png" v-if="valLeft.sdetail != ''" class="questionIcon">
+											<span @click="showPopup(valLeft.slink,valLeft.sid,valLeft.sname,valLeft.sdetail,valLeft.sisorder)">{{valLeft.sname}}</span>
+										</van-row>
+									</van-col>
+								</van-col>
+								<van-col class="col_left" v-else style="width:100%;marginLeft:0;borderTop:0" :class="{canClick : val.link == 'true', col_left_One : index == 0,detail : val.detail != '',canSort : val.isorder != '0'}">
+									<!-- <span @click="toCompareDetail(val.link,val.sid)">{{val.name}}</span> -->
+									<!-- <van-icon :name="sortImg" v-if="val.isorder != '0'" class="icons" /> -->
+									<img :src="sortImg" v-if="val.isorder != '0'" class="questionIcon">
+									<!-- <van-icon name="question-o" v-if="val.detail != ''" class="icons red"/> -->
+									<img src="./static/img/icons.png" v-if="val.detail != ''" class="questionIcon">
+									<!-- <van-icon name="more-o" v-if="val.link == 'true'" class="icons"/> -->
+									<span @click="showPopup(val.link,val.sid,val.name,val.detail,val.isorder)">{{val.name}}</span>
+								</van-col>
+							</van-row>
+						</van-col>
+						<!-- 右侧内容数据 -->
+						<van-col class="tableCol_right" :class="index == 0 ? 'tableCol_rightMargin' : ''" v-for="(val,index) in compareInfo.length"
+						 :key="index">
+							<van-row class="row_right" :class="indexInfo == 0 ? 'row_rightTop' : ''" v-for="(valInfo,indexInfo) in compareInfo[index]"
+							 :key="indexInfo">
+								<!-- {{valInfo}} -->
+								<span class="tobuy" v-if="valInfo.indexOf('buyNet') !=-1">
+									<a :href="valInfo.split('buyNet')[1].split('Length')[0]">购买</a>
+								</span>
+								<span v-else :class="[valInfo.indexOf('Tel') !=-1 ? 'tels':'',valInfo.split('Length')[1]== undefined ? '':'canClick']"
+								 @click="rightShowPopup(valInfo)">
+									{{valInfo.split("Tk,")[0].split("Tel")[0].split('Length')[0]}}
+								</span>
+							</van-row>
+						</van-col>
+					</van-row>
+				</div>
+				<van-popup v-model="popShow">
+					<div class="popContainer">
+						<p class="popText">{{popText}}</p>
+						<p class="popTexts" v-for="(val,index) in popDetail" :key="index">{{val}}</p>
+						<div class="btnLeft" v-if="thisLink == 'true'">
+							<van-button hairline type="info" size="small" @click="toCompareDetail(thisLink)">
+								点击查看
+							</van-button>
+						</div>
+						<div class="btnLeft both" v-if="isOrder != '0'">
+							<van-button hairline type="info" size="small" @click="reSorts(true)">
+								点击升序排列
+							</van-button>
+							<van-button hairline type="danger" size="small" @click="reSorts(false)">
+								点击降序排列
+							</van-button>
+						</div>
+					</div>
+				</van-popup>
+				<van-popup v-model="rightPopShow">
+					<div class="popContainer">
+						<p class="popText" v-for="(val,index) in rightPopText" :key="index">{{val}}</p>
+						<div class="btnLeft both">
+							<a class="btnTel" :href="'tel:'+ rightPopText" v-if="canTel">立即咨询</a>
+							<van-button hairline type="info" size="small" v-if="seeAdr != undefined" @click="rightPop(seeAdr)">
+								点击查看
+							</van-button>
+							<van-button hairline type="danger" size="small" v-if="downloadAdr != undefined" @click="rightPop(downloadAdr)">
+								点击下载
+							</van-button>
+						</div>
+					</div>
+				</van-popup>
+			</div>
+		</div>
+		<!-- <script src="js/chunk-vendors.76f48a47.js"></script>
+		<script src="js/app.1f282178.js"></script> -->
+		<script>
+			var type
+			var compareId
+			var openId
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					tableWidth: 0,
+					compareLeftData: [],
+					compareInfo: [],
+					compareId: [],
+					type: 'T2',
+					sorts: 1,
+					popShow: false,
+					rightPopShow: false,
+					popText: '',
+					popDetail: '',
+					rightPopText: '',
+					isOrder: '',
+					thisSid: '',
+					thisLink: false,
+					seeAdr: '',
+					downloadAdr: '',
+					canTel: true,
+					sortImg: "./static/img/sort.png",
+
+					btnkg: 0
+
+				},
+				created: function() {
+					// this.type = JSON.parse(window.sessionStorage.getItem('details')).type;
+					// this.ids = JSON.parse(window.sessionStorage.getItem('details')).id;
+					// this.openId = window.sessionStorage.getItem('openId');
+					type = JSON.parse(window.sessionStorage.getItem('details')).type;
+					compareId = JSON.parse(window.sessionStorage.getItem('compareInfo')).compareId;
+
+					openId = window.sessionStorage.getItem('openId');
+
+					this.type = JSON.parse(window.sessionStorage.getItem('compareInfo')).type;
+					this.compareId = JSON.parse(window.sessionStorage.getItem('compareInfo')).compareId;
+					var resdata = {
+						"code": "S0001",
+						"data": {
+							"name": [
+								[{
+									"name": "产品名称",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "一、保险公司",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "电话",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "二、产品种类",
+									"link": "false",
+									"isorder": "0",
+									"detail": "消费型:被保险人身故或保障期满后,无保险赔付责任;\\n返还型:被保险人身故或保障期满后,可以获得保险赔付,包括赔付保费、现金价值和保额等形式.\\n",
+									"issc": "0",
+									"value": [{
+										"sdetail": "消费型:被保险人身故或保障期满后,无保险赔付责任;\\n返还型:被保险人身故或保障期满后,可以获得保险赔付,包括赔付保费、现金价值和保额等形式.\\n",
+										"sisorder": "0",
+										"sname": "保障类型",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付次数",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "保障时间",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "重疾分组",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "特定人群",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "三、投保要求",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "投保年龄",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "职业范围",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "四、最高保额",
+									"link": "false",
+									"isorder": "S120",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "五、保障年限",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "六、缴费年限",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "七、等待期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "八、犹豫期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "九、保障责任",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(一)身故保障",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(二)全残保障",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(三)疾病终末期保险金",
+									"link": "false",
+									"isorder": "0",
+									"detail": "疾病终末期指被保险人所患疾病已经无法以现有的医疗技术治疗或缓解并且将在未来六个月内死亡。在此情况下，被保险人将获得保险赔偿。",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(四)满期保险金",
+									"link": "false",
+									"isorder": "0",
+									"detail": "指被保险人在保险合同到期后，未发生重疾赔付，保险公司将向被保险人返还一定的费用。",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(五)重疾保障",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "①重疾名称",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S139",
+									"issort": false
+								}, {
+									"name": "②赔付次数",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "③间隔期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "④其他责任",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "⑤癌症单独分组",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "⑥保费豁免",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(六)中症保障",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "①中症名称",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S146",
+									"issort": false
+								}, {
+									"name": "②赔付次数",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "③赔付额度",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "④赔付要求",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "⑤间隔期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "⑥保费豁免",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(七)轻症条款",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "①轻症名称",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S153",
+									"issort": false
+								}, {
+									"name": "②赔付次数",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "③赔付额度",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "④间隔期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "⑤赔付要求",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "⑥保费豁免",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(八)少儿特定疾病",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "①疾病名称",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S160",
+									"issort": false
+								}, {
+									"name": "②赔付比例",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "③间隔期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "④赔付条件",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(九)男性特定疾病",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "①疾病名称",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S165",
+									"issort": false
+								}, {
+									"name": "②赔付比例",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "③间隔期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "④赔付条件",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(十)女性特定疾病",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "①疾病名称",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S170",
+									"issort": false
+								}, {
+									"name": "②赔付比例",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "③间隔期",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "④赔付条件",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(十一)特定疾病高龄保险金",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付条件",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付比例",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(十二)癌症保险金",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付条件",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付比例",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(十三)心血管疾病保险金",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付条件",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "0",
+										"sname": "赔付比例",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "十、投保人豁免",
+									"link": "false",
+									"isorder": "0",
+									"detail": "投保人处于某种情况下，可以免交余下的保费",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "十一、确诊医院等级",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "十二、核保方式",
+									"link": "false",
+									"isorder": "0",
+									"detail": "网络核保:通过网络进行的核保;\\n智能核保:当被保险人不符合健康告知时,可以直接进入网络系统预设好的疾病项目进行更为精确的核保,并会在过程结束后立即反馈核保结论;\\n人工核保:当被保险不符合健康告知时,根据保险公司要求发送相关资料,由保险公司人工核保后再反馈结论.\\n",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "十三、附加服务",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S184",
+									"issort": false
+								}, {
+									"name": "十四、保费测算",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(1)基本保费测算(保额50万、至终身、含身故、30年交)",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "男",
+									"link": "false",
+									"isorder": "S187",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "S187",
+										"sname": "5岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S188",
+										"sname": "20岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S189",
+										"sname": "30岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S190",
+										"sname": "40岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S305",
+										"sname": "50岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S306",
+										"sname": "60岁",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "女",
+									"link": "false",
+									"isorder": "S191",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "S191",
+										"sname": "5岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S192",
+										"sname": "20岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S193",
+										"sname": "30岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S194",
+										"sname": "40岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S307",
+										"sname": "50岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S308",
+										"sname": "60岁",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "(2)投保人豁免保费(男、大25岁、30年交)",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "男(被保险人)",
+									"link": "false",
+									"isorder": "S196",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "S196",
+										"sname": "5岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S197",
+										"sname": "20岁",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "女(被保险人)",
+									"link": "false",
+									"isorder": "S198",
+									"detail": "",
+									"issc": "0",
+									"value": [{
+										"sdetail": "",
+										"sisorder": "S198",
+										"sname": "5岁",
+										"sissort": false,
+										"slink": "false"
+									}, {
+										"sdetail": "",
+										"sisorder": "S199",
+										"sname": "20岁",
+										"sissort": false,
+										"slink": "false"
+									}],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "十五、条款原文",
+									"link": "true",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "S200",
+									"issort": false
+								}, {
+									"name": "十六、重点条款注释",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}, {
+									"name": "十七、购买链接",
+									"link": "false",
+									"isorder": "0",
+									"detail": "",
+									"issc": "0",
+									"value": [],
+									"sid": "",
+									"issort": false
+								}],
+								["瑞泰成长密码重大疾病保险Length", "瑞泰人寿保险有限公司", "4008109339TelLength", "消费型", "单次赔付", "一年期", "不分组", "少儿(1)",
+									"30天-17岁", "", "50万", "80岁", "趸交", "90天", "", "", "", "", "", "", "100", "√", "1次", "", "", "", "", "20",
+									"√", "1次", "50%", "", "", "", "40", "√", "1次", "30%", "", "", "", "", "", "", "", "", "", "", "", "", "",
+									"", "", "", "", "", "", "", "", "", "", "", "", "二级及以上公立医院", "智能核保、网络核保", "", "", "", "255元", "", "", "",
+									"", "", "255元", "", "", "", "", "", "", "", "", "", "", "√", "1.本产品可续保至26岁。Length", ""
+								],
+								["光大永明惠加保重大疾病保险Length", "光大永明人寿保险有限公司Length", "95348Tel", "消费型", "多次赔付", "终身、定期", "分组（6组）", "", "30天-55岁",
+									"1-4类", "50万", "至80岁、终身", "10年、15年、20年、30年Length", "90天", "15天", "", "", "", "", "", "110", "√", "5次",
+									"180天", "", "√", "√", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+									"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "二级及以上公立医院", "人工核保、网络核保、智能核保Length", "√", "",
+									"", "970元(无身故)", "1600元(无身故)", "2320元(无身故)", "3635元(无身故)", "", "", "1245元(无身故)", "2040元(无身故)",
+									"2970元(无身故)", "4525元(无身故)", "", "", "", "", "", "", "", "√", "1、责任简单，只有重疾责任。Length", ""
+								],
+								["开心小保贝少儿重大疾病保险Length", "爱心人寿保险股份有限公司Length", "10109520TelLength", "返还型", "多次赔付", "定期、终身", "不分组", "少儿(1)",
+									"28天-17岁", "1-4类", "50万", "20年、30年、终身", "5年、10年、15年、20年、30年Length", "180天", "15天", "", "√(保费或现价)", "", "",
+									"", "110", "√", "3次", "1年", "150%(前10年)", "", "√", "30", "√", "2次", "依次50%、60%", "", "", "√", "30", "√",
+									"3次", "依次30%、40%、50%Length", "", "", "√", "20(另有8种罕见病)Length", "√", "100%(25岁前)", "", "1次", "", "", "",
+									"", "", "", "", "", "", "", "", "", "", "", "", "", "√(重症、中症、轻症、身故、全残) Length", "二级及以上公立医院", "网络核保、智能核保",
+									"", "", "", "2435元", "", "", "", "", "", "2165元", "", "", "", "", "", "", "279.56元", "", "248.56元", "",
+									"√", "", ""
+								],
+								["爱心人寿爱加倍(挚爱版)终身重大疾病保险Length", "爱心人寿保险股份有限公司Length", "10109520TelLength", "返还型", "多次赔付", "终身", "不分组", "",
+									"28天-50岁", "1-4类", "40万", "终身", "趸交、5年、10年、15年、20年、30年Length", "90天", "15天", "", "√（保额）", "√（保额）",
+									"√（保额）", "", "105", "√", "3次", "1年", "", "", "√", "30", "√", "3次", "60%", "", "", "√", "30", "√", "3次",
+									"40%", "", "", "√", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "间隔3年(首次确诊)",
+									"100%", "间隔3年(首次确诊急性心肌梗塞或脑中风后遗症)Length", "100%", "", "二级及以上公立医院", "智能核保、网络核保", "", "", "", "5800元(40万)",
+									"9600元(40万)", "13680元(40万)Length", "20720元(40万)Length", "", "", "5400元(40万)", "8920元(40万)",
+									"12560元(40万)Length", "18280元(40万)Length", "", "", "", "", "", "", "", "√",
+									"1.另有身故特别关爱保障(首次重疾确诊后1-5年身故，每年增加20%保额，满5年100%赔付)。Length", ""
+								]
+							]
+						},
+						"message": "成功",
+						"fid": "S0007"
+					}
+					this.compareLeftData = resdata.data.name.slice(0, 1)[0];
+					this.compareInfo = resdata.data.name.slice(1);
+					let width = this.compareInfo.length * 150 + 162;
+					this.tableWidth = width;
+				},
+				mounted: function() {
+					return
+					getMore()
+				},
+				methods: {
+					toCompareDetail(key) {
+						if (key == 'false') {
+							return false
+						} else if (key == 'true') {
+							let data = {
+								type: this.type,
+								sid: this.thisSid,
+								num: this.compareInfo.length,
+							}
+							// this.$router.push({
+							// 	name: `compareDetail`,
+							// 	params: {
+							// 		data: data
+							// 	}
+							// });
+							window.location.href='compareDetail.html'
+						}
+					},
+					showPopup(key, val, name, detail, order) {
+						this.popShow = true;
+						this.thisLink = key;
+						this.thisSid = val;
+						this.popText = name;
+						this.isOrder = order;
+						let str = detail;
+						str = str.split("\\n");
+						this.popDetail = str;
+					},
+					rightShowPopup(val) {
+						if (val.indexOf('Tel') != -1) {
+							this.canTel = true;
+						} else {
+							this.canTel = false;
+						}
+						this.seeAdr = val.split("Tk,")[1];
+						this.downloadAdr = val.split("Tk,")[2];
+						this.rightPopShow = true;
+						this.rightPopText = val.split("Tk,")[0].split("Tel")[0].split("Length")[0].split("\\n");
+					},
+					rightPop(val) {
+						window.location.href = val;
+					},
+					reSorts(val) {
+						if(val){
+							layer.msg('升序')
+						}else{
+							layer.msg('降序')
+						}
+						this.popShow = false;
+						return
+						let data = {
+							fid: "S0007",
+							type: this.type,
+							openId: this.$store.state.openId,
+							keyword: this.isOrder,
+							ids: this.compareId,
+							sorts: val
+						}
+						api(data).then(res => {
+							this.compareLeftData = res.data.data.name.slice(0, 1)[0];
+							this.compareInfo = res.data.data.name.slice(1);
+							console.log(this.compareLeftData)
+							let width = this.compareInfo.length * 150 + 150;
+							this.tableWidth = width;
+							this.popShow = false;
+						});
+					}
+				}
+			});
+
+
+
+			function getMore() {
+				// if (vm.btnkg == 1) {
+				// 	return
+				// }
+				// vm.btnkg = 1
+				var serchData = JSON.parse(sessionStorage.getItem('detailData'));
+				var data = {
+					fid: "S0007",
+					type: type,
+					openId: openId,
+					keyword: "",
+					ids: compareId,
+					sorts: false
+				}
+				$.ajax({
+					url: "https://www.xiaotubaoxian.com/bx/mobile",
+					data: JSON.stringify(data),
+					type: "post",
+					contentType: 'application/json',
+					'X-Requested-With': 'XMLHttpRequest',
+					dataType: 'json',
+					success: function(res) {
+						vm.btnkg = 0
+						// console.log(res);
+						if (res.code == 1) {
+							console.log(res)
+							vm.compareLeftData = res.data.data.name.slice(0, 1)[0];
+							vm.compareInfo = res.data.data.name.slice(1);
+							var width = vm.compareInfo.length * 150 + 150;
+							vm.tableWidth = width;
+							var w = window.innerWidth ||
+								document.documentElement.clientWidth ||
+								document.body.clientWidth;
+							vm.rightWidth = w - 150;
+							vm.isLike = vm.compareLeftData[0].issc;
+						} else {
+
+							// layerMsg(res.msg);
+						}
+					},
+					error: function(err) {
+						vm.btnkg = 0
+						// layer.closeAll()
+						// layerMsg('系统错误')
+					}
+				})
+			}
+
+
+			function Storage_get(name) {
+				return JSON.parse(localStorage.getItem(name))
+			}
+
+			function Storage_set(name, val) {
+				localStorage.setItem(name, JSON.stringify(val))
+			}
+		</script>
+	</body>
+</html>

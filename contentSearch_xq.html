@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<title>按内容搜索</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script charset="utf-8" src="./static/js/chunk-0080c6a6.613f8e42.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3d60d7d2.ebde4dfb.css">
+		<script charset="utf-8" src="./static/js/chunk-3d60d7d2.78d9daea.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-1a7bd638.d551c669.css">
+		<script charset="utf-8" src="./static/js/chunk-1a7bd638.5e0ad938.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3e69cd44.d12d75d8.css">
+		<script charset="utf-8" src="./static/js/chunk-3e69cd44.428bed1a.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-79926bad.f5014da9.css">
+		<script charset="utf-8" src="./static/js/chunk-79926bad.e246b0a8.js"></script>
+		
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<link rel="stylesheet" href="./static/css/vantIndex_xtcpk.css">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vant.js"></script>
+	</head>
+	<body style=""><noscript><strong>We're sorry but share doesn't work properly without JavaScript enabled. Please enable
+				it to continue.</strong></noscript>
+		<div id="app" style="width: 100%; height: 667px;"  v-cloak>
+			<div data-v-04c96057="" id="contentSearch">
+				<div data-v-18f18e78="" data-v-04c96057="" id="getBack">
+					<a href="javascript:history.back(-1);">
+						<button data-v-18f18e78="" class="getback van-button van-button--default van-button--small"><span
+						 data-v-18f18e78="" class="van-button__text">
+							首页
+						</span></button>
+					</a>
+					<div data-v-18f18e78="" class="clear"></div>
+				</div>
+				<div data-v-04c96057="" class="groupBox">
+					<h2 data-v-04c96057="" class="title"><span data-v-04c96057="">医疗险</span></h2>
+					<div data-v-04c96057="" class="bgBox">
+						<block v-for="(item,index) in datas" >
+							<div data-v-04c96057="" class="detailSearchBox" v-if="item.type==1">
+								<h4 data-v-04c96057="" class="detailSearchBox_title">{{item.name}}</h4>
+								<div data-v-04c96057="" class="detaiChoose">
+									<span data-v-04c96057="" v-for="(item1,index1) in item.list" :class="getactive(item,index1)" @click="active_fuc(item,index1)">
+										{{item1.name}}
+									</span>
+								</div>
+							</div>
+							<div data-v-04c96057="" class="detailSearchBox" v-if="item.type==2">
+								<h4 data-v-04c96057="" class="detailSearchBox_title">{{item.name}}</h4>
+								<div data-v-04c96057="" class="detaiChoose">
+									<span data-v-04c96057="" v-for="(item1,index1) in item.list" :class="getactive(item,index1)" @click="active_fuc(item,index1)">
+										{{item1.name}}
+									</span>
+								</div>
+							</div>
+						</block>
+						
+						
+					</div>
+				</div>
+				<div data-v-04c96057="" class="contentSearchs van-row">
+					<div data-v-04c96057="" class="van-col van-col--12" @click="reset_fuc()"><button data-v-04c96057="" class="reset van-button van-button--warning van-button--normal van-button--hairline van-button--round van-hairline--surround"><span
+							 data-v-04c96057="" class="van-button__text">重置</span></button></div>
+					<div data-v-04c96057="" class="van-col van-col--12" @click="sub_fuc()"><button data-v-04c96057="" class="sure van-button van-button--info van-button--normal van-button--hairline van-button--round van-hairline--surround"><span
+							 data-v-04c96057="" class="van-button__text">确定</span></button></div>
+				</div>
+			</div>
+		</div>
+		<script src="./static/js/chunk-vendors.76f48a47.js"></script>
+		<!-- <script src="js/app.1f282178.js"></script> -->
+		<script>
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					search_key: '',
+					showPicker: false, //投保人
+					datas:[
+						{
+							name:'种类',
+							type:1,
+							list: [{
+									name: '全部',
+									id: 0
+								},
+								{
+									name: '百万医疗险',
+									id: 1
+								},
+								{
+									name: '防癌险',
+									id: 2
+								},
+								{
+									name: '门诊医疗',
+									id: 3
+								},
+								{
+									name: '高端医疗',
+									id: 4
+								},
+							],
+						},
+						{
+							name:'投保年龄',
+							type:1,
+							list: [{
+									name: '全部',
+									id: 0
+								},
+								{
+									name: '0-17岁',
+									id: 1
+								},
+								{
+									name: '50岁以下',
+									id: 2
+								},
+								{
+									name: '50岁以上',
+									id: 3
+								},
+							],
+						},
+						{
+							name:'职业范围',
+							type:1,
+							list: [{
+									name: '不限',
+									id: 0
+								},
+								{
+									name: '1-4级',
+									id: 1
+								},
+								{
+									name: '5-6级',
+									id: 2
+								},
+							],
+						},
+						{
+							name:'特需医疗',
+							type:1,
+							list: [{
+									name: '全部',
+									id: 0
+								},
+								{
+									name: '有',
+									id: 1
+								},
+								{
+									name: '无',
+									id: 2
+								},
+							],
+						},
+						{
+							name:'保证续保',
+							type:1,
+							list: [{
+									name: '全部',
+									id: 0
+								},
+								{
+									name: '有',
+									id: 1
+								},
+								{
+									name: '无',
+									id: 2
+								},
+							],
+						},
+						{
+							name:'用药范围(多选)',
+							type:2,
+							list: [{
+									name: '限社保用药',
+									id: 0
+								},
+								{
+									name: '不限社保用药',
+									id: 1
+								},
+								{
+									name: '院外购药',
+									id: 2
+								},
+							],
+						},
+						{
+							name:'保额≥',
+							type:1,
+							list: [{
+									name: '全部',
+									id: 0
+								},
+								{
+									name: '0-50万',
+									id: 1
+								},
+								{
+									name: '50万以上',
+									id: 2
+								},
+								{
+									name: '100万以上',
+									id: 3
+								},
+							],
+						},
+						{
+							name:'家庭计划',
+							type:1,
+							list: [{
+									name: '全部',
+									id: 0
+								},
+								{
+									name: '有',
+									id: 1
+								},
+								{
+									name: '无',
+									id: 2
+								},
+							],
+						},
+						{
+							name:'核保方式(多选)',
+							type:2,
+							list: [{
+									name: '网络核保',
+									id: 0
+								},
+								{
+									name: '智能核保',
+									id: 1
+								},
+								{
+									name: '人工核保',
+									id: 2
+								},
+							],
+						},
+					]
+
+				},
+				created: function() {
+
+				},
+				mounted: function() {
+
+				},
+				methods: {
+					getactive: function(item,num) {
+						// console.log(item)
+						
+						if(item.type==1){
+							if(!item.active){
+								var newarr=[0]
+								Vue.set(item,'active',newarr)
+							}
+							if(item.active[0]==num){
+								return 'checked'
+							}
+							return ''
+						}
+						if(item.type==2){
+							if(!item.active){
+								return ''
+							}else{
+								for(var i=0;i<item.active.length;i++){
+									if(item.active[i]==num){
+										return 'checked'
+									}
+								}
+							}
+							
+						}
+						// this.active = num
+					},
+					active_fuc: function(item,num) {
+						console.log(item,num)
+						if(item.type==1){
+							Vue.set(item.active,0,num)
+						}
+						if(item.type==2){
+							if(item.active&&item.active.length>0){
+								for(var i=0;i<item.active.length;i++){
+									if(item.active[i]==num){
+										var ls_arr=item.active
+										ls_arr.splice(i, 1)
+										Vue.set(item,'active',ls_arr)
+										return
+									}
+								}
+							}
+							var ls_arr1=item.active
+							ls_arr1.push(num)
+							Vue.set(item,'active',ls_arr1)
+						}
+						// this.active = num
+					},
+					reset_fuc: function(value) { //投保人
+						var that =this
+						for(var i=0;i<that.datas.length;i++){
+							var reset_data
+							if(item.type==1){
+								reset_data=[0]
+							}
+							if(item.type==2){
+								reset_data=[]
+							}
+							Vue.set(that.datas[i],'active',reset_data)
+						}
+					},
+					sub_fuc(value) {
+						var that =this
+						var sub_list=[]
+						for(var i=0;i<that.datas.length;i++){
+							var new_ans
+							if(!that.datas[i].active|| that.datas[i].active&&that.datas[i].active.length==0){
+								// layer.msg('请选择'+that.datas[i].name)
+								// return
+								
+							}
+							new_ans={
+								id:that.datas[i].name,
+								key:that.datas[i].active||[]
+							}
+							sub_list.push(new_ans)
+						}
+						console.log(sub_list)
+						Storage_set('sub_list',sub_list)
+						window.location.href = 'xtcpk_index.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/index'
+					}
+				}
+			});
+			function Storage_get(name) {
+			    return JSON.parse(localStorage.getItem(name))
+			}
+			
+			function Storage_set(name, val) {
+			    localStorage.setItem(name, JSON.stringify(val))
+			}
+		</script>
+	</body>
+</html>

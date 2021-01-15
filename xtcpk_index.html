@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<meta name="format-detection" content="telephone=yes">
+		<title>搜索结果列表</title>
+		<link href="./static/css/chunk-08344b87.812c8e13.css" rel="prefetch">
+		<link href="./static/css/chunk-1a7bd638.d551c669.css" rel="prefetch">
+		<link href="./static/css/chunk-3d60d7d2.ebde4dfb.css" rel="prefetch">
+		<link href="./static/css/chunk-3e69cd44.d12d75d8.css" rel="prefetch">
+		<link href="./static/css/chunk-4589c879.6b72d5af.css" rel="prefetch">
+		<link href="./static/css/chunk-4e1aac80.08e9a8d1.css" rel="prefetch">
+		<link href="./static/css/chunk-79926bad.f5014da9.css" rel="prefetch">
+		<link href="./static/css/chunk-b54f7384.712b74c0.css" rel="prefetch">
+		<link href="./static/css/chunk-b65928a2.a7b1aa71.css" rel="prefetch">
+		<link href="./static/js/chunk-0080c6a6.613f8e42.js" rel="prefetch">
+		<link href="./static/js/chunk-08344b87.ea1bd740.js" rel="prefetch">
+		<link href="./static/js/chunk-1a7bd638.5e0ad938.js" rel="prefetch">
+		<link href="./static/js/chunk-3d60d7d2.78d9daea.js" rel="prefetch">
+		<link href="./static/js/chunk-3e69cd44.428bed1a.js" rel="prefetch">
+		<link href="./static/js/chunk-4589c879.e5faf897.js" rel="prefetch">
+		<link href="./static/js/chunk-4e1aac80.b454f76c.js" rel="prefetch">
+		<link href="./static/js/chunk-79926bad.e246b0a8.js" rel="prefetch">
+		<link href="./static/js/chunk-b54f7384.becdfdae.js" rel="prefetch">
+		<link href="./static/js/chunk-b65928a2.cbbcb34f.js" rel="prefetch">
+		<link href="./static/css/app.2ea3fb9f.css" rel="preload" as="style">
+		<link href="./static/js/app.1f282178.js" rel="preload" as="script">
+		<link href="./static/js/chunk-vendors.76f48a47.js" rel="preload" as="script">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="stylesheet">
+		<link href="./static/css/app.2ea3fb9f.css" rel="stylesheet">
+		<script charset="utf-8" src="./static/js/chunk-0080c6a6.613f8e42.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3d60d7d2.ebde4dfb.css">
+		<script charset="utf-8" src="./static/js/chunk-3d60d7d2.78d9daea.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-1a7bd638.d551c669.css">
+		<script charset="utf-8" src="./static/js/chunk-1a7bd638.5e0ad938.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-3e69cd44.d12d75d8.css">
+		<script charset="utf-8" src="./static/js/chunk-3e69cd44.428bed1a.js"></script>
+		<link rel="stylesheet" type="text/css" href="./static/css/chunk-79926bad.f5014da9.css">
+		<script charset="utf-8" src="./static/js/chunk-79926bad.e246b0a8.js"></script>
+		
+		<script src="http://web.xiaotubaoxian.com/static/web/js/jquery.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/layer/layer.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vue.min.js"></script>
+		<script src="http://web.xiaotubaoxian.com/static/web/js/url_suxin.js"></script>
+		<link rel="stylesheet" href="./static/css/vantIndex_xtcpk.css">
+		<link href="./static/css/chunk-vendors.17b87806.css" rel="preload" as="style">
+		<script src="http://web.xiaotubaoxian.com/static/web/js/vant.js"></script>
+	</head>
+	<body style=""><noscript><strong>We're sorry but share doesn't work properly without JavaScript enabled. Please enable
+				it to continue.</strong></noscript>
+		<div id="app" style="width: 100%; height: 667px;" v-cloak>
+			<div data-v-639d3766="" id="index">
+				<div data-v-639d3766="">
+					<div data-v-18f18e78="" data-v-639d3766="" id="getBack" class="getBackBtn">
+						<a href="javascript:history.back(-1);">
+							<button data-v-18f18e78="" class="getback van-button van-button--default van-button--small">
+								<span data-v-18f18e78="" class="van-button__text">重新检索</span>
+							</button>
+						</a>
+						<div data-v-18f18e78="" class="clear"></div>
+					</div>
+					<div data-v-639d3766="" id="buttonBox">
+						<button data-v-639d3766="" class="compare van-button van-button--default van-button--normal" @click="toCompare"
+						 v-if="Insurances.length>0" :class="compare ? 'compareing':''">
+							<span data-v-639d3766="" class="van-button__text">
+								{{compare ? '确定':'对比'}}
+							</span>
+						</button>
+					</div>
+					<div data-v-639d3766="" class="dataBox">
+						<div data-v-639d3766="" class="dataNum">共{{pcount}}条/{{Insurances.length}}条</div>
+						<ul data-v-639d3766="" class="insurancesData">
+							<li data-v-639d3766="" :id="item.id" v-for="(item,index) in Insurances" 
+							:class="[checkedData.indexOf(item.pid) != -1 ? 'compareChecked':'',item.isOnline == '0' ? 'unOnline':'']"
+							 @click="goDetail(item.pid,item.ptypeCode)">
+								<img data-v-639d3766="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAE7ElEQVRogdXbS2yUVRjG8R86UEAKUhovULEiCmqiEjQqiSSiiSHiLSaGDe40EVCXGjW6QYwbF4qXuDHRjXEDiMYYbwsTLxEETZSLSGrBIgrFllqkxOjifGOHdi7f5Uyl/2TS6Tdn3vM8M+c713cm3L/lH5E5E4txI67EJejADExPyvSjDwfwI77DZ9iGv2OKKUWK04K7cC9uFszUY3ryuAA3VFzvw8d4G5twoqiwCQW/wVl4GGuS5zE5gpfwQvI8F2fkfN9UrEMXnhLfnCTmU0kd65I6M5PH4O34AU9gWp5KMzItqWtnUncmshicjBfxDi7MWlEE5iZ1b0i0pCKtwfPxOdZm1xWdNYKW89MUTmPw0iTgogKiYrNI0HRpo4KNDM4XxqfO4pqi0ylom1+vUD2DHfgI58TTFJ1zhHGzo1aBWgZb/H+dSVbKnU9LtRdrGXze6XXPNWKRoHkU1QzeidVNldMcVgvaT2GkwVa8PCZymsPLhif0GG3wMcweMznxmY1HKy9UGixPnMc7D6uYG1culx7RhLnl9IlcXGfx1D6VWSOm0bOn8+k+th/OVeU0weTTDBuchAdzhcPKhSyrO9xmp6c/t0FCh/MMhsoGl6M9b7RvfmVe2+jrB49x/OTw/4vnMGMKO3roHWR/H4MnR7/vpz76q1zPQLvgaXPZ4Koi0fb8wfrPG5eb1xYMftFd6NtJyyqJwRbcmjfKyoXpy86cEv7eMJcFKdvLkUE+7M6uS/DUUsK1CnQuee69qzMMRF29uQ1OwzUlXJfr7QkPvJu+7ONL6GzjlS/HpInC9SUsiBGp0XAAkyeGv3Mb7bmJ9gEsKCHDXVSbi2fw4PXpyt52WeMyWVpGHRaWRF4S7egJvWQ17r6C81p5byfdfdXLpP2QUnJhCWfHjNg7WLt5LU/Gtu6+MbsHZ5aMmH0XZV5b7aEjzzBRkNZYW/f/MXNK9VkNtCSdzHmtnJ16468QQyUcE9aBUdj2C2/tqv5aeZjY+H3tJvrailhKwMAZOBo15OnFsRJ+FjZuorBsfuPZTeSesh7dJewSzvKi0NXLvt7qr41cTVQj8rJrVwm7Y0T6qS9MwQ4dp+fP6mXSrCZ2xx0+dpfwVdEos89i6QXheb15X5Zhon1q7kl2JV+W8DUGFFhRnDslW9NKs5oosIooM4CtJeGY+APckzfS9sPp5o5jvJr4ACfKu2pvNr26sedNhs/oJ6FHxqPoRe3N7/K7etNth4zgMOao2HQawit4MkuUQ8f5ZG/myjNxpMZw0oBXBU+nZFnMEg78x+LcvZkM4CLhWzxlZ/uIkLIx3tkgMcfos4nnhHtxvNKDZysvjDTYLxzyj1fWCh7+o9r54Ca8PiZy4vI6No68WOuEdy12NFVOXL5VI8WllsFBIatof7MUReQAVgiaR1Evy+IAluG3JoiKxe+4SdBalUZ5MnuFtWJXPE3R6MJSQWNN0mQ67cESbC+uKRrbBU01dn+GSZurdjAJuKGAqFi8JGg5mKZwlmzDv/AQ7kDxpWh2upO61yZaUpEnX3QLLsN6Yd7XbAaSui5P6s5E3ozfQSFJtVPIxq2xzVSI3iR2Z1JXjZ2e+hTN2S4zSTgTvw+3yH8c0C8kAL6B9yVLniLE2rofwubkUfmzgquEdMcOtOEsnBSa3VEcErr58s8Ktor8s4J/AZWKGximqR5tAAAAAElFTkSuQmCC"
+								 class="liIcon">
+								{{item.pname}}
+								<span v-if="item.isBuy==1" data-v-639d3766="" class="shop">购</span>
+								<img data-v-639d3766="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAcCAYAAACDBoQZAAABrElEQVRIia3VT4iNURzG8c8YU5NSapKZlFJjo0hC+bOZWZAFNnYUSShJFrLEFJFQKJbSRVFETRYzJUWyYBoLZSHKYlIWk4WUPzOL33vqzO2OuefO/Hbvt95vzznnOe/bVhuZaMdfczDzcAt9cyXrwRDOoH22MpXkdCXtmY3sdfbch1FsbVV2Dnvws2KL8QwXML9UBvewEZ8yfgrPsaxUBu+xDoMZ24J32FEqg3HsFCf7r2JdeIIr6CiRqSRnK+l4xdpwAq+wvESWZlAsezRj68Wyd5fKiAPZhLsZW4SHuIHOEhlRmb04jt8ZPyo6uqJEluYa+jGWsTV4K3paVkq8FPv4AJsrthA1LClJlmbM1C6m6S1N1o3b2FbHX+BSSbLtoia56BdOir383EyyTlzEMVHeNCPilD8kMJNsJe5jdcb+iC/KgKlV+a/sCC5jQcY+Yh/eNHqh0Z514TFuZqIJXMfa6USNkvXjDpZm7CsOYHg6SX2yDpwX/4BcVMOqZkQpWa+4yBsy/h2H8agZSS67Wid6ikP4ViIilpm68wMHsasVUUpGXIf9+NKKJM0k6LRQ+GDVNRwAAAAASUVORK5CYII="
+								 class="liked">
+							</li>
+
+							<li data-v-639d3766="" class="getMore">
+								加载更多
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./static/js/chunk-vendors.76f48a47.js"></script>
+		<!-- <script src="./static/js/app.1f282178.js"></script> -->
+		<script>
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					search_key: '',
+					showPicker: false, //投保人
+
+					compare: false,
+					Insurances1: [],
+					checkedData: [],
+					pageIndex: 1,
+					detailData: [],
+					type: 'T0',
+					froms: '',
+					pcount: '',
+					pcount: "132",
+					Insurances: [{
+						"isBuy": "0",
+						"pname": "爱心人寿爱加倍(挚爱版)终身重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "bfcee7c784f24d5595ba861ee47f5765",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "瑞泰成长密码重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "368a94bda28f4800af34c6f699282d2c",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "开心小保贝少儿重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "c84477c4dbf34f769e7001375088edc8",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "光大永明惠加保重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "3e35f126f9294bcba14ea118fd29efec",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "富德生命爱宝保少儿重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "8a00d61035a3413c997341742767e959",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "大黄蜂少儿重疾险3号Plus",
+						"ptype": "重疾险",
+						"pid": "91a83e6daf4a49ad9368e3598eeb627f",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "1",
+						"pname": "达尔文3号重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "f20ae378262f445190f090ea75c6fe3b",
+						"isOnline": "1",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "百年康惠保(2.0版）重大疾病保险",
+						"ptype": "重疾险",
+						"pid": "d8764bf2659f407281768c3ba70348c7",
+						"isOnline": "0",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "0",
+						"pname": "爱心守护神少儿重疾",
+						"ptype": "重疾险",
+						"pid": "dd873a459568424fa371b7cd29e7c8ea",
+						"isOnline": "1",
+						"ptypeCode": "T1"
+					}, {
+						"isBuy": "1",
+						"pname": "信泰人寿超级玛丽max3号重疾险",
+						"ptype": "重疾险",
+						"pid": "a0057fdd47c348d38afe5e74db6fdfd8",
+						"isOnline": "1",
+						"ptypeCode": "T1"
+					}]
+
+
+
+				},
+				created: function() {
+					if (sessionStorage.getItem("froms") == "nameSearch") {
+						getMore();
+					} else if (sessionStorage.getItem("froms") == "contentSearch") {
+						contentGetMore();
+					}
+				},
+				mounted: function() {
+
+				},
+				methods: {
+					toCompare: function() { //数据对比
+						if (this.compare) {
+							if (this.checkedData.length <= 1) {
+								layer.msg('请至少选择两项内容');
+								this.compare = false;
+								return false;
+							} else {
+								// this.$router.push({
+								// 	name: `compare`,
+								// 	params: {
+								// 		compareId: this.checkedData,
+								// 		type: this.type
+								// 	}
+								// });
+								var 	params= {
+								 		compareId: this.checkedData,
+										type: this.type
+								 	}
+								window.sessionStorage.setItem('compareInfo',JSON.stringify(params));
+								window.location.href='compare.html'
+							}
+						} else {
+							this.compare = !this.compare;
+						}
+					},
+					goDetail: function(val, type) { //跳转详情
+						if (this.compare) {
+							if (this.type == 'T0') {
+								this.type = type;
+							} else {
+								if (type != this.type) {
+									layer.msg('请选择相同类型对比');
+									this.checkedData = [];
+									this.type = 'T0';
+								} else {
+									let thisIndex = this.checkedData.indexOf(val);
+									if (thisIndex == -1) {
+										if (this.checkedData.length >= 5) {
+											layer.msg('最多可对比五项内容');
+										} else {
+											this.checkedData.splice(0, 0, val);
+										}
+									} else {
+										this.checkedData.splice(thisIndex, 1);
+									}
+								}
+							}
+						} else {
+							let detailData = {
+								type: type,
+								id: [val]
+							}
+							// this.$store.state.detailData = detailData;
+							sessionStorage.setItem("details", JSON.stringify(detailData));
+							// this.$router.push({
+							// 	name: `detail`,
+							// });
+							// jump('detail.html')
+							window.location.href='detail.html'
+						}
+					},
+					iconCode(code) {
+						switch (code) {
+							case 'T1':
+								return "../static/img/1.png";
+								break;
+							case 'T2':
+								return "../static/img/2.png";
+								break;
+							case 'T3':
+								return "../static/img/3.png";
+								break;
+							case 'T4':
+								return "../static/img/4.png";
+								break;
+							case 'T5':
+								return "../static/img/5.png";
+								break;
+							case 'T6':
+								return "../static/img/6.png";
+								break;
+						}
+
+					},
+					typeCode(code) {
+						switch (code) {
+							case 'T1':
+								return 'red';
+								break;
+							case 'T2':
+								return 'orange';
+								break;
+							case 'T3':
+								return 'blue';
+								break;
+							case 'T4':
+								return 'purple';
+								break;
+							case 'T5':
+								return 'yellow';
+								break;
+							case 'T6':
+								return 'green';
+								break;
+						}
+					},
+				}
+			});
+
+			function moreAndMore() {
+				if (sessionStorage.getItem("froms") == "nameSearch") {
+					getMore();
+				} else if (sessionStorage.getItem("froms") == "contentSearch") {
+					contentGetMore();
+				}
+			}
+
+			function getMore() {
+				if (vm.btnkg == 1) {
+					return
+				}
+				vm.btnkg = 1
+				var serchData = JSON.parse(sessionStorage.getItem('detailData'));
+				var data = {
+					fid: 'S0004',
+					openId: this.$store.state.openId,
+					flag: String(serchData.flag),
+					type: serchData.type,
+					qType: serchData.qType,
+					keyword: serchData.keyword,
+					pageSize: this.$store.state.pageSize,
+					pageIndex: "1",
+				}
+				$.ajax({
+					url: "https://www.xiaotubaoxian.com/bx/mobile",
+					data: data,
+					type: "post",
+					dataType: 'json',
+					success: function(res) {
+						vm.btnkg = 0
+						// console.log(res);
+						if (res.code == 1) {
+							this.pcount = res.data.data.pcount;
+							this.Insurances = res.data.data.list;
+							this.$store.state.pageSize += 10;
+							this.loading = false;
+						} else {
+
+							// layerMsg(res.msg);
+						}
+					},
+					error: function(err) {
+						vm.btnkg = 0
+						// layer.closeAll()
+						// layerMsg('系统错误')
+					}
+				})
+			}
+
+			function contentGetMore() {
+				if (vm.btnkg == 1) {
+					return
+				}
+				vm.btnkg = 1
+				var serchData = JSON.parse(sessionStorage.getItem('contentSearchData'));
+				var data = {
+					fid: 'S0004',
+					openId: this.$store.state.openId,
+					flag: String(serchData.flag),
+					type: serchData.type,
+					qType: serchData.qType,
+					keyword: serchData.keyword,
+					pageSize: this.$store.state.pageSize,
+					pageIndex: "1",
+				}
+				$.ajax({
+					url: "https://www.xiaotubaoxian.com/bx/mobile",
+					data: data,
+					type: "post",
+					dataType: 'json',
+					success: function(res) {
+						vm.btnkg = 0
+						// console.log(res);
+						if (res.code == 1) {
+							this.pcount = res.data.data.pcount;
+							this.Insurances = res.data.data.list;
+							this.$store.state.pageSize += 10;
+							this.loading = false;
+						} else {
+
+							// layerMsg(res.msg);
+						}
+					},
+					error: function(err) {
+						vm.btnkg = 0
+						// layer.closeAll()
+						// layerMsg('系统错误')
+					}
+				})
+			}
+
+			function Storage_get(name) {
+				return JSON.parse(localStorage.getItem(name))
+			}
+
+			function Storage_set(name, val) {
+				localStorage.setItem(name, JSON.stringify(val))
+			}
+		</script>
+	</body>
+</html>
