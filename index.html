@@ -16,22 +16,26 @@
 			body {
 				background: #fff;
 			}
-			*{
+
+			* {
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
 			}
-			.minh100{
-					min-height: 100vh;
-					width: 100%;
+
+			.minh100 {
+				min-height: 100vh;
+				width: 100%;
 				background: #fff;
 			}
-			.h_box{
+
+			.h_box {
 				width: 100%;
 				padding: 0 .20rem;
-				
+
 			}
-			.top_box{
+
+			.top_box {
 				width: 100%;
 				min-height: 1.95rem;
 				position: relative;
@@ -40,7 +44,8 @@
 				font-size: .42rem;
 				color: #37424A;
 			}
-			.top_box div{
+
+			.top_box div {
 				position: absolute;
 				z-index: 10;
 				line-height: .50rem;
@@ -48,25 +53,29 @@
 				margin-top: -.25rem;
 				left: .05rem;
 			}
-			.top_img{
+
+			.top_img {
 				width: 100%;
 				height: auto;
 				position: relative;
 				z-index: 1;
 				/* margin-bottom: .10rem; */
 			}
-			.main_box{
+
+			.main_box {
 				flex-wrap: wrap;
 				width: 100%;
 			}
-			.main_box a{
+
+			.main_box a {
 				width: 50%;
 				/* height: 4.70rem; */
 				padding: .10rem;
 				font-size: 0;
 				display: block;
 			}
-			.main_box a img{
+
+			.main_box a img {
 				width: 100%;
 				max-width: 49vw;
 				height: auto;
@@ -77,12 +86,13 @@
 		<div class="minh100">
 			<div class="h_box box_size">
 				<div class="top_box">
-					<img class="top_img" src="./static/images/xiaotujingxuan1_03.jpg"   />
+					<img class="top_img" src="./static/images/xiaotujingxuan1_03.jpg" />
 					<div>Hi~ 欢迎使用小兔保</div>
 				</div>
 				<div class="main_box dis_flex">
 					<!-- <a  href="https://www.xiaotubaoxian.com/xtbx"><img src="./static/images/xiaotujingxuan_06.jpg" mode="aspectFill" /></a> -->
-					<a  href="xtcpk_search.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/choose"><img src="./static/images/xiaotujingxuan_06.jpg" mode="aspectFill" /></a>
+					<a href="xtcpk_search.html?code=0717KzFa1FDOjA05U7Ha153TAg47KzFS&state=3#/choose"><img src="./static/images/xiaotujingxuan_06.jpg"
+						 mode="aspectFill" /></a>
 					<a href="http://web.xiaotubaoxian.com/"><img src="./static/images/xiaotujingxuan_08.jpg" mode="aspectFill" /></a>
 					<a href="http://web.xiaotubaoxian.com/index/search"><img src="./static/images/xiaotujingxuan_11.jpg" mode="aspectFill" /></a>
 					<a href="http://web.xiaotubaoxian.com/index/policyList"><img src="./static/images/xiaotujingxuan_12.jpg" mode="aspectFill" /></a>
@@ -90,11 +100,26 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			var appid='wx1be56187bf9cabc5'
 			$(function() {
+				
+					login()
+				/*var code = getNowCanshu().code
+				console.log(code)
+				var local = window.location.href
+				console.log(local)
+				if (code == null || code === '') {
+					// squrl='https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect 若提示“该链接无法访问”，请检查参数是否填写错误，是否拥有scope参数对应的授权作用域权限。'
+					window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='+appid+'&redirect_uri=' +
+						encodeURIComponent(local) + '&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect'
+				} else {
+					// 你自己的业务逻辑
+				}*/
+
 				// document.write('getmac')
 				// document.write(JSON.stringify(h.device()))
 			})
-		
+
 			var vm = new Vue({
 				el: "#wrap",
 				data: {
@@ -107,7 +132,6 @@
 					]
 				},
 				created: function() {
-
 				},
 				mounted: function() {
 
@@ -118,12 +142,46 @@
 			});
 
 			function getmac() {
-				try{
-				
-				}catch(err){
+				try {
+
+				} catch (err) {
 					return err
 				}
-				
+
+			}
+
+			function login() {
+				if (vm.btnkg == 1) {
+					return
+				}
+				vm.btnkg = 1
+				var data = {
+					code: '051XIj000Pf74L1ReL100bgchm4XIj01'
+				}
+				$.ajax({
+					url: "https://www.xiaotubaoxian.com/bx/wechat/login",
+					data: data,
+					type: "post",
+					dataType: 'json',
+					success: function(res) {
+						vm.btnkg = 0
+						// console.log(res);
+						if (res.code == 1) {
+							this.pcount = res.data.data.pcount;
+							this.Insurances = res.data.data.list;
+							this.$store.state.pageSize += 10;
+							this.loading = false;
+						} else {
+
+							// layerMsg(res.msg);
+						}
+					},
+					error: function(err) {
+						vm.btnkg = 0
+						// layer.closeAll()
+						// layerMsg('系统错误')
+					}
+				})
 			}
 		</script>
 	</body>
